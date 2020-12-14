@@ -1,8 +1,15 @@
+// Choose random words
+const randomGenerator = arr => {
+    //console.log(arr);
+    let indexOfWord = Math.floor(Math.random() * arr.length);
+    return arr[indexOfWord];
+}
+
 const mixedMessage = () => { //main funtion to print out results
-    let greeting = 'mate';
-    let question1 = 'sheep';
-    let question2 = 'kangaroo';
-    let answer = 'poo';
+    let greeting = randomGenerator(possibleGreetings);
+    let question1 = randomGenerator(things);
+    let question2 = randomGenerator(things);
+    let answer = randomGenerator(possibleAnswer);
 
 
 
@@ -18,8 +25,3 @@ let possibleGreetings = ["mate", "friend", "pal", "person", "human", "thing", "b
 let things = ["hot dog", "computer", "hand", "T-shirt", "finger", "pen", "table", "chair", "lamp", "window", "mouse", "cat", "dog"];
 let possibleAnswer = ["fresh food", "crap", "fish and chips", "something gruesome", "poo", "gunk", "intertwined bodies" ];
 
-// Choose random words
-const randomGenerator = arr => {
-    let indexOfWord = Math.floor(Math.random() * arr.length);
-    return arr[indexOfWord];
-}
