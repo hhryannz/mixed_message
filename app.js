@@ -13,7 +13,13 @@ const mixedMessage = () => { //main funtion to print out results
     console.log(`A big pile of ${answer}`)
 }
 
+// all of the nouns to use
 let possibleGreetings = ["mate", "friend", "pal", "person", "human", "thing", "bucko", "kid", "you"];
 let things = ["hot dog", "computer", "hand", "T-shirt", "finger", "pen", "table", "chair", "lamp", "window", "mouse", "cat", "dog"];
 let possibleAnswer = ["fresh food", "crap", "fish and chips", "something gruesome", "poo", "gunk", "intertwined bodies" ];
 
+// Choose random words
+const randomGenerator = arr => {
+    let indexOfWord = Math.floor(Math.random() * arr.length);
+    return arr[indexOfWord];
+}
